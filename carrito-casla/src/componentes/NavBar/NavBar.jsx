@@ -1,3 +1,4 @@
+import CardWidget from "../CardWidget/CardWidget";
 import "./NavBar.css";
 
 
@@ -25,10 +26,7 @@ const NavBar = () => {
           <li>
             <a href="">accesorios</a>
           </li>
-          <li className="carritoEstilo">
-            <a href="">🛒</a>
-            <div className="contador">4</div>
-          </li>
+          <CardWidget/>
         </ul>    
       </nav>
 

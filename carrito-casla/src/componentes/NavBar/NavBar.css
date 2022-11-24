@@ -44,15 +44,5 @@ nav ul li a:hover{
     justify-content: space-evenly;
 }
 
-.carritoEstilo{
-    display: flex;
-}
 
-.contador{
-    position: fixed;
-    border-radius: 50%;
-    background-color: #2C3333;
-    color: #E7F6F2;
-    font-size: 15px;
-}
 
