@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./CardWidget.css";
 
 
@@ -5,7 +6,9 @@ const CardWidget = () => {
   return (
 
     <li className="carritoEstilo">
-      <a href="">🛒</a>
+      <Link to="/cart">
+         🛒
+      </Link>
       <div className="contador">4</div>
     </li>
   )

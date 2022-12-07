@@ -1,0 +1,27 @@
+.botonesContenedor {
+    margin-top: 15px;
+}
+
+.contadorDetalle {
+    font-size: 3em;
+}
+
+.botonesCards {
+    font-size: 1.8rem;
+    width: 80%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+.botonDetalle {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
