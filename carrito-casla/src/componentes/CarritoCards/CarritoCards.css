@@ -1,0 +1,25 @@
+.cardsCarrito {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    width: 80%;
+}
+
+.tituloCardsCarrito {
+    font-size: 2.3em;
+}
+
+.precioCardsCarrito {
+    font-size: 1.8em;
+}
+
+.countCardsCarrito {
+    font-size: 2em;
+}
+
+.imagenCardsCarrito {
+    height: 200px;
+    width: 200px;
+}

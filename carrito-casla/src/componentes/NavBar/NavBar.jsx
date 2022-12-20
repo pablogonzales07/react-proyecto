@@ -13,19 +13,19 @@ const NavBar = () => {
         </div>
         <ul className="itemsEstilo">
           <li>
-            <Link to={"/category/remeras"}>remeras</Link>
+            <Link to={"/category/remeras"}>REMERAS</Link>
           </li>
           <li>
-            <Link to="/category/pantalones">pantalones</Link>
+            <Link to="/category/pantalones">PANTALONES</Link>
           </li>
           <li>
-            <Link to="/category/buzos">buzos</Link>
+            <Link to="/category/buzos">BUZOS</Link>
           </li>
           <li>
-            <Link to="/category/medias">medias</Link>
+            <Link to="/category/medias">MEDIAS</Link>
           </li>
           <li>
-            <Link to="/category/accesorios">accesorios</Link>
+            <Link to="/category/accesorios">ACCESORIOS</Link>
           </li>
           <CardWidget/>
         </ul>    

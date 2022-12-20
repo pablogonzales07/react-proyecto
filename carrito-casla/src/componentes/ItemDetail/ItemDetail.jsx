@@ -1,13 +1,27 @@
-import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
+import { useState } from 'react'
 import "./ItemDetail.css"
+import InputCount from '../InputCount/InputCount'
+import { useContext } from 'react'
+import { CartContext } from '../../context/CartContext'
 
 const ItemDetail = ( { product } ) => {
 
-    const onAdd = (cant) => {
-        console.log("usted ha agregado la cantidad de:", cant, "productos al carrito")
-      }
+    const [inputType, setInputType] = useState("button")
+    const { cartList, agregarCarrito } = useContext(CartContext)
 
+    const onAdd = (cant) => {
+        console.log("usted ha agregado la cantidad de:", cant, "productos al carrito");
+        setInputType("input")
+        agregarCarrito( product, cant )
+ 
+    }
+
+   
+
+  console.log( product )  
+  console.log(cartList);
+    
   return (
     <div className='cardsDetalleProducto'>
       <div>
@@ -17,7 +31,12 @@ const ItemDetail = ( { product } ) => {
           <b className="precioProductDetalle">{ product.precio }</b>
         </div>
       </div>
-      <ItemCount stock={ 7 } initial={ 1 } onAdd={ onAdd } />
+      {
+
+        inputType === "button" ? <ItemCount stock={ 7 } initial={ 1 } onAdd={ onAdd } /> : <InputCount/>
+        
+      }
+    
     </div>
   )
 }

@@ -1,0 +1,21 @@
+.buttonRegistContainer {
+    text-decoration: none;
+}
+
+
+.buttonRegist {
+    cursor: pointer;
+    height: 25px;
+    border-radius: 4px;
+    width: 118px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(21, 30, 36);
+    text-transform: uppercase;
+}

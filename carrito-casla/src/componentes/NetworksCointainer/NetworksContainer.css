@@ -1,0 +1,12 @@
+.networksContainer {
+    background-color: #263159;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
