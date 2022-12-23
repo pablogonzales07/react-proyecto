@@ -9,7 +9,9 @@ const NavBar = () => {
     <>
       <nav className="navEstilo">
         <div className="logoEstilo">
-          <Link to="/">CASLA TIENDA</Link>
+          <Link to="/">
+            <img src="../../../public/logoDos.png" alt="" />
+          </Link>
         </div>
         <ul className="itemsEstilo">
           <li>

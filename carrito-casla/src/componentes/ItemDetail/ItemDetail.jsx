@@ -8,7 +8,7 @@ import { CartContext } from '../../context/CartContext'
 const ItemDetail = ( { product } ) => {
 
     const [inputType, setInputType] = useState("button")
-    const { cartList, agregarCarrito } = useContext(CartContext)
+    const { agregarCarrito } = useContext(CartContext)
 
     const onAdd = (cant) => {
         console.log("usted ha agregado la cantidad de:", cant, "productos al carrito");
@@ -16,12 +16,7 @@ const ItemDetail = ( { product } ) => {
         agregarCarrito( product, cant )
  
     }
-
    
-
-  console.log( product )  
-  console.log(cartList);
-    
   return (
     <div className='cardsDetalleProducto'>
       <div>

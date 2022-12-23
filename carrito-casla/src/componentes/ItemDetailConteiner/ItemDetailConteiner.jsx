@@ -3,10 +3,12 @@ import { gFetch } from "../../helpers/gFetch";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import "./ItemDetailConteiner.css"
+import Loading from "../Loading/Loading";
 
 
 const ItemDetailConteiner = () => {
     const [product, setProduct] = useState( {} )
+    const [loading, setLoading] = useState(true)
 
     const { productId } = useParams()
     console.log(productId);
@@ -15,11 +17,16 @@ const ItemDetailConteiner = () => {
         gFetch()
         .then(data => setProduct(data.find(prod => prod.id === productId)))
         .catch(err => console.log(err))
+        .finally(() => setLoading(false))
     })
 
   return (
     <div className="cardDetalleContenedor">
-      <ItemDetail product={ product } />
+
+      {
+        loading ? <Loading /> : <ItemDetail product={ product } />
+      }
+
     </div>
   )
 }

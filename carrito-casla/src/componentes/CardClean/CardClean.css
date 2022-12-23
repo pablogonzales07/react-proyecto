@@ -1,0 +1,24 @@
+.boxCardClean {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.boxCardClean h2 {
+    font-size: 3em;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.boxCardClean A button {
+    font-size: 2em;
+    font-weight: 700;
+    padding: 10px;
+    background-color: #DC3535;
+    color: #263159;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}

@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { gFetch } from "../../helpers/gFetch";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import Loading from "../Loading/Loading";
 
 
 
@@ -36,7 +37,7 @@ const ItemListConteiner = ( { greeting } ) => {
           <section>
             <p>{greeting}</p>
             {
-              loading ? <h2 >cargando....</h2> 
+              loading ? <Loading /> 
                      : 
              <ItemList products={ products }/>
             }      

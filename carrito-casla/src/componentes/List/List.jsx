@@ -1,8 +1,8 @@
-import React from 'react'
+import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import "./List.css"
 
-const List = ({ product }) => {
+const List = memo( ({ product }) => {
   return (
     <>
       <div className="cards">
@@ -16,8 +16,9 @@ const List = ({ product }) => {
         </div>
       </div>
     </>
-  )
-}
+    )
+  }
+)
 
 export default List
 
