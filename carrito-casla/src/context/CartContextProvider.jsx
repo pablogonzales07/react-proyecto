@@ -14,7 +14,8 @@ export const CartContextProvider = ({ children }) => {
         let producto = cartList.find(item => item.id === product.id);
 
         if(producto) {
-            producto.cant += cantidad
+            cartList.map(item => item.id === product.id ? {...item, cant: item.cant + cantidad} : item)
+            /* producto.cant += cantidad */
             newCart=[ ...cartList ]
 
         }
@@ -43,6 +44,8 @@ export const CartContextProvider = ({ children }) => {
         setPrice(price - product.precio * product.cant)
          
     }
+
+    console.log(cartList);
    
 
     return(
