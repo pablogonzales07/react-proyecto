@@ -9,6 +9,7 @@
 
 .tituloCardsCarrito {
     font-size: 2.3em;
+    width: 40%;
 }
 
 .precioCardsCarrito {
@@ -22,4 +23,13 @@
 .imagenCardsCarrito {
     height: 200px;
     width: 200px;
+}
+
+.botonEliminarProducto {
+    border: none;
+    font-size: 2em;
+    background-color: #0a141d;
+    color: #DC3535;
+
+
 }

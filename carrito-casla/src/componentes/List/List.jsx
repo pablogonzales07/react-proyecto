@@ -9,7 +9,7 @@ const List = memo( ({ product }) => {
         <img className="cardsImg" src={ product.img }/>
         <div className="cardsBody">
           <h3 className="cardsTitulo">{ product.nombre }</h3>
-          <b className="cardsPrecio">{ product.precio }</b>
+          <b className="cardsPrecio">{ product.precio }$</b>
           <Link to={`/detail/${product.id}`}>
             <button className="cardsBoton">DETALLE</button>
           </Link>

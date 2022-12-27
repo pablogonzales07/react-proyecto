@@ -13,6 +13,7 @@
 .cardsTitulo {
     color: grey;
     font-size: 22px;
+    padding: 10px;
 }
 
 .cardsPrecio {

@@ -5,7 +5,7 @@
     margin-bottom: 25px;
     max-height: 88vh;
     color: #fff;
-    background-color: #263159;
+    background-color: #0a141d;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,4 +27,17 @@
     color: #263159;
     margin-bottom: 10px;
     border-radius: 5px;
+}
+
+.totalContainer {
+    background-color: #263159;
+    width: 100%;
+}
+
+.titleTotal {
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #fff;
 }

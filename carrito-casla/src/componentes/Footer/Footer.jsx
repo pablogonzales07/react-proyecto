@@ -23,16 +23,16 @@ const Footer = () => {
             <div className="box">
                 <h2>NUESTRAS REDES</h2>
                  <div className="redesFooter">
-                    <a href="">
+                    <a href="https://www.twitter.com/sanlorenzo" target={"_blank"}>
                         <ImTwitter/>
                     </a>
-                    <a href="">
+                    <a href="https://www.facebook.com/sanlorenzo" target={"_blank"}>
                         <ImFacebook2 />
                     </a>
-                    <a href="">
+                    <a href="https://www.instagram.com/sanlorenzo" target={"_blank"}>
                         <ImInstagram />
                     </a>
-                    <a href="">
+                    <a href="https://www.youtube.com/@sanlorenzo" target={"_blank"}>
                         <ImYoutube/>
                     </a>                   
                  </div>

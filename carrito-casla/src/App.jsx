@@ -24,8 +24,8 @@ function App() {
          <NetworksContainer/>
            <NavBar/>
            <Routes>
-             <Route path="/" element={<> <Header/> <ItemListConteiner greeting={"Coder saludo"}/></> }/>
-             <Route path="/category/:id" element={ <ItemListConteiner greeting={"Coder saludo"}/> }/>
+             <Route path="/" element={<> <Header/> <ItemListConteiner /></> }/>
+             <Route path="/category/:id" element={ <ItemListConteiner /> }/>
              <Route path="/detail/:productId" element={ <ItemDetailConteiner/> }/>
              <Route path="/cart" element={ <CartConteiner/> }/>
              <Route path="*" element= { <Navigate to="/"/> } />

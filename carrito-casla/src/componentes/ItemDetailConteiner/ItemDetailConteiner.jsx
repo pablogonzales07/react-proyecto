@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"
-import { gFetch } from "../../helpers/gFetch";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import "./ItemDetailConteiner.css"
 import Loading from "../Loading/Loading";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 
 const ItemDetailConteiner = () => {
@@ -11,14 +11,18 @@ const ItemDetailConteiner = () => {
     const [loading, setLoading] = useState(true)
 
     const { productId } = useParams()
-    console.log(productId);
-
+    
     useEffect(() => {
-        gFetch()
-        .then(data => setProduct(data.find(prod => prod.id === productId)))
-        .catch(err => console.log(err))
-        .finally(() => setLoading(false))
-    })
+
+      const db = getFirestore();
+      const queryDoc = doc(db, "productos", productId);
+      getDoc(queryDoc)
+      .then(resp => setProduct({ id: resp.id, ...resp.data() }))
+      .catch(err => console.log(err))
+      .finally(() => setLoading(false))
+  }, [])
+
+
 
   return (
     <div className="cardDetalleContenedor">

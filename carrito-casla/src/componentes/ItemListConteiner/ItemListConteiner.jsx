@@ -1,6 +1,6 @@
 import "./ItemListConteiner.css";
 import { useState, useEffect } from "react";
-import { gFetch } from "../../helpers/gFetch";
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore"
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import Loading from "../Loading/Loading";
@@ -8,34 +8,37 @@ import Loading from "../Loading/Loading";
 
 
 
-const ItemListConteiner = ( { greeting } ) => {
+const ItemListConteiner = (  ) => {
 
   const [products, setProducts] = useState( [] )
   const [loading, setLoading] = useState(true)
   const { id } = useParams()
 
-  console.log( id );
+ useEffect(() => {
+
+    if(id) {
+
+      const db = getFirestore();
+      const queryCollection = collection(db, "productos");
+      const queryFiltrada = query(queryCollection, where("categoria", "==", id));
+      getDocs(queryFiltrada)
+      .then(data => setProducts( data.docs.map(product => ({ id: product.id, ...product.data() } ) ) ) )
+      .catch(err => console.log(err)) 
+      .finally(() => setLoading(false))
+    }
+    else {
+      const db = getFirestore();
+      const queryCollection = collection(db, "productos");
+      getDocs(queryCollection)
+      .then(data => setProducts( data.docs.map(product => ({ id: product.id, ...product.data() } ) ) ) )
+      .catch(err => console.log(err)) 
+      .finally(() => setLoading(false))
+    }
+
+ }, [id])
   
-  useEffect(() => {
-
-    if(id){
-      gFetch()
-      .then(data => setProducts(data.filter(prod => prod.categoria === id)))
-      .catch(error => console.log(error))
-      .finally(() => setLoading(false))
-    }
-    else{
-      gFetch()
-      .then(data => setProducts(data))
-      .catch(error => console.log(error))
-      .finally(() => setLoading(false))
-
-    }
-  }, [id])
-
   return (
           <section>
-            <p>{greeting}</p>
             {
               loading ? <Loading /> 
                      : 

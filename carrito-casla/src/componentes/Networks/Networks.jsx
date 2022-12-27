@@ -7,28 +7,23 @@ const Networks = () => {
     <div>
         <ul className='itemsRedes'>
             <li>
-                <a href="" target={"_blank"} className="redesIcons">
+                <a href="https://www.twitter.com/sanlorenzo" target={"_blank"} className="redesIcons">
                     <ImTwitter/>
                 </a>
             </li>
             <li>
-                <a href="" className="redesIcons">
+                <a href="https://www.facebook.com/sanlorenzo" target={"_blank"} className="redesIcons">
                     <ImFacebook2/>
                 </a>
             </li>
             <li>
-                <a href="" className="redesIcons">
+                <a href="https://www.instagram.com/sanlorenzo" target={"_blank"} className="redesIcons">
                     <ImInstagram/>
                 </a>
             </li>
             <li>
-                <a href="" className="redesIcons">
+                <a href="https://www.youtube.com/@sanlorenzo" target={"_blank"} className="redesIcons">
                     <ImYoutube/>
-                </a>
-            </li>
-            <li>
-                <a href="" className="redesIcons">
-                    <ImTwitch/>
                 </a>
             </li>
         </ul>

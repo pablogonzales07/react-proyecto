@@ -17,8 +17,8 @@ const CartConteiner = () => {
       {cartList.length > 0 && 
                <>
                   <button className='botonVaciarCarrito' onClick={vaciarCarrito}>VACIAR CARRITO</button>
-                  <div>
-                    <h3>{` el total a pagar es ${ price } `}</h3>
+                  <div className='totalContainer'>
+                    <h3 className='titleTotal'>{` EL TOTAL A PAGAR ES ${ price }$ ARS`}</h3>
                   </div>              
                </>
       }
