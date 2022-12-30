@@ -10,17 +10,17 @@
     height: 250px;
 }
 
-.cardsTitulo {
+.cardsTitle {
     color: grey;
     font-size: 22px;
     padding: 10px;
 }
 
-.cardsPrecio {
+.cardsPrice {
     font-size: 3em;
 }
 
-.cardsBoton {
+.cardsButtons {
     border: none;
     outline: 0;
     padding: 12px;
@@ -32,7 +32,7 @@
     font-size: 18px;
 }
 
-.cardsBoton:hover{
+.cardsButtons:hover{
     opacity: 0.7;
 }
 

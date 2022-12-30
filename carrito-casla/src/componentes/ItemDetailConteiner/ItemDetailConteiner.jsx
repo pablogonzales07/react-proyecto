@@ -13,7 +13,6 @@ const ItemDetailConteiner = () => {
     const { productId } = useParams()
     
     useEffect(() => {
-
       const db = getFirestore();
       const queryDoc = doc(db, "productos", productId);
       getDoc(queryDoc)
@@ -25,7 +24,7 @@ const ItemDetailConteiner = () => {
 
 
   return (
-    <div className="cardDetalleContenedor">
+    <div className="cardsDetailContainer">
 
       {
         loading ? <Loading /> : <ItemDetail product={ product } />

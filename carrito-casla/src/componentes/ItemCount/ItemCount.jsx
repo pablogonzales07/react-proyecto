@@ -5,19 +5,19 @@ const ItemCount = ( { stock=7, initial=1, onAdd} ) => {
 
   const [ count, setCount ] = useState(initial);
 
-  const sumar = () => {
+  const add = () => {
     if(count < stock){
       setCount(count+1)
     }
   };
 
-  const restar = () => {
+  const subtract = () => {
     if(count > initial) {
       setCount(count-1)
     }
   };
 
-  const agregarCarrito = () => {
+  const addCart = () => {
     onAdd(count)
   }
 
@@ -25,16 +25,16 @@ const ItemCount = ( { stock=7, initial=1, onAdd} ) => {
 
 
   return (
-    <div className='botonesContenedor'>
+    <div className='buttonsContainerDetail'>
       <div>
-        <label className='contadorDetalle' htmlFor="">{ count }</label>
+        <label className='countDetail' htmlFor="">{ count }</label>
       </div>
       <div>
-        <button className='botonesCards' onClick={ sumar }> + </button>
-        <button className='botonesCards' onClick={ restar }> - </button>
+        <button className='buttonsCardsDetail' onClick={ add }> + </button>
+        <button className='buttonsCardsDetail' onClick={ subtract }> - </button>
       </div>
       <div>
-        <button className='botonDetalle' onClick={ agregarCarrito }>Agregar al carrito</button>
+        <button className='buttonAddToCart' onClick={ addCart }>Agregar al carrito</button>
       </div>  
     </div>
   )

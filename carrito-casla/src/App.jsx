@@ -7,13 +7,10 @@ import "./App.css"
 import CartConteiner from "./componentes/CartConteiner/CartConteiner";
 import NetworksContainer from "./componentes/NetworksCointainer/NetworksContainer";
 import Header from "./componentes/Header/Header";
-import { CartContextProvider } from "./context/CartContextProvider";
-import Footer from "./componentes/Footer/Footer";
-
-
-
-
-
+import { CartContextProvider } from "./context/CartContextProvider";import Footer from "./componentes/Footer/Footer";
+import FormRegist from "./componentes/FormRegist/FormRegist";
+import FormLogin from "./componentes/FormLogin/FormLogin";
+import FormCartContainer from "./componentes/FormCartContainer/FormCartContainer";
 
 
 function App() {
@@ -28,6 +25,9 @@ function App() {
              <Route path="/category/:id" element={ <ItemListConteiner /> }/>
              <Route path="/detail/:productId" element={ <ItemDetailConteiner/> }/>
              <Route path="/cart" element={ <CartConteiner/> }/>
+             <Route path="/registUser" element={ <FormRegist /> } />
+             <Route path="/loginUser" element={ <FormLogin /> } />
+             <Route path="/confirmPurchase" element={ <FormCartContainer /> } />
              <Route path="*" element= { <Navigate to="/"/> } />
            </Routes>
            <Footer />

@@ -7,13 +7,13 @@ import "./NavBar.css";
 const NavBar = () => {
   return (
     <>
-      <nav className="navEstilo">
-        <div className="logoEstilo">
+      <nav className="navStyle">
+        <div className="logoStyle">
           <Link to="/">
-            <img src="../../../public/logoDos.png" alt="" />
+            <img src="/assets/logoDos.png" alt="" />
           </Link>
         </div>
-        <ul className="itemsEstilo">
+        <ul className="itemsStyle">
           <li>
             <Link to={"/category/remeras"}>REMERAS</Link>
           </li>

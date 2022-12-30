@@ -7,29 +7,27 @@
     width: 80%;
 }
 
-.tituloCardsCarrito {
+.titleCardsCart {
     font-size: 2.3em;
     width: 40%;
 }
 
-.precioCardsCarrito {
+.priceCardsCart {
     font-size: 1.8em;
 }
 
-.countCardsCarrito {
+.countCardsCart {
     font-size: 2em;
 }
 
-.imagenCardsCarrito {
+.imageCardsCart {
     height: 200px;
     width: 200px;
 }
 
-.botonEliminarProducto {
+.buttonDeleteProduct {
     border: none;
     font-size: 2em;
     background-color: #0a141d;
     color: #DC3535;
-
-
 }

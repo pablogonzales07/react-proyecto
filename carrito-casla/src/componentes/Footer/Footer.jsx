@@ -5,11 +5,11 @@ const Footer = () => {
   return (
     <>
        <footer className="footerContainer">
-        <div className="grupoUno">
+        <div className="groupOne">
             <div className="box">
                 <figure>
                     <a href="#">
-                        <img src="../../../public/logoDos.png" alt="" />
+                        <img src="/assets/logoDos.png" alt="" />
                     </a>
                 </figure>
             </div>
@@ -22,7 +22,7 @@ const Footer = () => {
             </div>
             <div className="box">
                 <h2>NUESTRAS REDES</h2>
-                 <div className="redesFooter">
+                 <div className="networksFooter">
                     <a href="https://www.twitter.com/sanlorenzo" target={"_blank"}>
                         <ImTwitter/>
                     </a>
@@ -39,7 +39,7 @@ const Footer = () => {
             </div>
         </div>
 
-        <div className="grupoDos">
+        <div className="groupTwo">
             <small>&copy; 2022 <b>TIENDA-CALSA</b> - Todos los derechos reservados</small>
         </div>
 

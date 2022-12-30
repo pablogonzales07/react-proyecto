@@ -6,7 +6,7 @@ const ItemList = memo( ({ products }) => {
   
   return (
     
-    <div className='cardsConteiner'>
+    <div className='cardsContainer'>
         {
             products.map( product => <List key={ product.id } product={ product }/> )                    
         }      

@@ -1,4 +1,4 @@
-.cardsCarritoContainer {
+.cardsCartContainer {
     width: 80%;
     margin: 0 auto;
     margin-top: 25px;
@@ -15,11 +15,11 @@
     scrollbar-color: none;
 }
 
-.cardsCarritoContainer::-webkit-scrollbar{
+.cardsCartContainer::-webkit-scrollbar{
     display: none;
 }
 
-.botonVaciarCarrito {
+.buttonEmptyCart {
     font-size: 2em;
     font-weight: 700;
     padding: 10px;

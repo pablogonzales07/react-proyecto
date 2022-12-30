@@ -9,21 +9,21 @@ const Header = () => {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="../../../public/headerCaslaPrimera.jpg"
+                src="/assets/headerCaslaPrimera.jpg"
                 alt="First slide"
               />
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="../../../public/headerCaslaSegunda.jpg"
+                src="/assets/headerCaslaSegunda.jpg"
                 alt="Second slide"
               />
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="../../../public/headerCaslaTercera.jpg"
+                src="/assets/headerCaslaTercera.jpg"
                 alt="Third slide"
               />
             </Carousel.Item>

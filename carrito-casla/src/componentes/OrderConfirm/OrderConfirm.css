@@ -1,0 +1,57 @@
+.boxOrderContainer {
+    background-color: #24303c;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.boxOrderContainer h3 {
+    font-size: 3em;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.bodyOrderCard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.bodyOrderCard h2 {
+    color: #fff;
+    font-size: 2.5em;
+}
+
+.bodyOrderCard p {
+    color: black;
+    font-size: 2em;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.bodyOrderCard img {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.buttonOrderConfirm {
+    width: 100%;
+    border: none;
+    background-color: #1f53c5;
+    padding: 12px;
+    color: #fff;
+    margin: 16px 0;
+    font-size: 20px;
+}
+
+

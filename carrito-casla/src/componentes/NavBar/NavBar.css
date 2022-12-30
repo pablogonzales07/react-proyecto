@@ -2,7 +2,7 @@ html {
     font-size: 62.5%;
 }
 
-.logoEstilo a img{
+.logoStyle a img{
    width: 100px;
    height: 100px;
 }
@@ -50,7 +50,7 @@ nav ul li a:hover::after {
 }
 
 
-.navEstilo{
+.navStyle{
     display: flex;
     justify-content: space-between;
     padding: 10px;
@@ -58,7 +58,7 @@ nav ul li a:hover::after {
     position: sticky;
 }
 
-.itemsEstilo{
+.itemsStyle{
     display: flex;
     justify-content: space-evenly;
     align-items: center;

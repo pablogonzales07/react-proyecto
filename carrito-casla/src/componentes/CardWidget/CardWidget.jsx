@@ -10,11 +10,11 @@ const CardWidget = () => {
 
   return (
 
-    <li className="carritoEstilo">
+    <li>
       <Link to="/cart">
          🛒
       </Link>
-      <span className="itemTotal">{countProducts}</span>
+      {countProducts != 0 && <span className="totalItem">{countProducts}</span>}
     </li>
   )
 }

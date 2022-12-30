@@ -4,21 +4,21 @@ import "./CarritoCards.css"
 
 const CarritoCards = ( { producto } ) => {
 
-  const { eliminarProductoCarrito } = useContext(CartContext);
+  const { removeProductCart } = useContext(CartContext);
 
-  const borrarProducto = () => {
-    eliminarProductoCarrito(producto)
+  const deleteProduct = () => {
+    removeProductCart(producto)
   }
 
   
   return (
      <>
           <div className="cardsCarrito">
-            <img className="imagenCardsCarrito" src={producto.img} alt="" />
-            <h3 className="tituloCardsCarrito">{producto.nombre}</h3>
-            <b className="precioCardsCarrito">{producto.precio}</b>
-            <b className="countCardsCarrito">{ producto.cant }</b> 
-            <button className="botonEliminarProducto" onClick={ borrarProducto }>X</button>               
+            <img className="imageCardsCart" src={producto.img} alt="" />
+            <h3 className="titleCardsCart">{producto.nombre}</h3>
+            <b className="priceCardsCart">{producto.precio}</b>
+            <b className="countCardsCart">{ producto.cant }</b> 
+            <button className="buttonDeleteProduct" onClick={ deleteProduct }>X</button>               
           </div>
 
      </>

@@ -1,21 +1,21 @@
-.cardsDetalleProducto {
+.cardsDetailsProducts {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
     margin: 10px 20px;
     text-align: center;
 }
 
-.imagenProductDetalle {
+.imageProductDetail {
     width: 100%;
     height: 250px;
 }
 
-.tituloProductDetalle {
+.titleProductDetail {
     color: grey;
     font-size: 22px;
     padding: 10px;
 }
 
-.precioProductDetalle {
+.priceProductDetail {
     font-size: 3em;
 }
