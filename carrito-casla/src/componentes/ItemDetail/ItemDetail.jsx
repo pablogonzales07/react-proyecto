@@ -2,13 +2,12 @@ import ItemCount from '../ItemCount/ItemCount'
 import { useState } from 'react'
 import "./ItemDetail.css"
 import InputCount from '../InputCount/InputCount'
-import { useContext } from 'react'
-import { CartContext } from '../../context/CartContext'
+import { useCartContext } from '../../context/CartContextProvider'
 
 const ItemDetail = ( { product } ) => {
 
     const [ inputType, setInputType ] = useState("button")
-    const { addToCart } = useContext(CartContext)
+    const { addToCart } = useCartContext()
 
     const onAdd = (cant) => {
         setInputType("input")

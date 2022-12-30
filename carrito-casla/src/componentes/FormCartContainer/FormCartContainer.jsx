@@ -1,5 +1,4 @@
-import { useContext, useState } from "react"
-import { CartContext } from "../../context/CartContext"
+import { useCartContext } from "../../context/CartContextProvider"
 import FormCart from "../FormCart/FormCart"
 import OrderConfirm from "../OrderConfirm/OrderConfirm"
 import "./FormCartContainer.css"
@@ -7,20 +6,15 @@ import "./FormCartContainer.css"
 
 const FormCartContainer = () => {
 
-  const { formOrder } = useContext(CartContext);
+  const { formOrder } = useCartContext();
 
   return (
 
     <>
 
        {
-
         formOrder === "form" ? <FormCart /> : <OrderConfirm />
-
        }
-
-      
-
 
     </>
   )

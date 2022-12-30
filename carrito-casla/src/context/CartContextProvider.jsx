@@ -1,12 +1,17 @@
-import { useState } from "react"
-import { CartContext } from "./CartContext"
+import { useState, useContext  } from "react"
+import { CartContext} from "./CartContext"
 import { addDoc, collection, getFirestore } from "firebase/firestore";
+
+
+
+export const useCartContext = () => useContext(CartContext)
 
 
 export const CartContextProvider = ({ children }) => { 
 
     const [cartList, setCartList] = useState( [] )
     const [ formOrder, setFormOrder] = useState("form")
+    const [ errorMsg, setErrorMsg ] = useState("")
     const [countProducts, setCountProducts] = useState(0);
     const [price, setPrice] = useState(0);
     const [dataForm, setDataForm] = useState( {
@@ -73,19 +78,30 @@ export const CartContextProvider = ({ children }) => {
         const db = getFirestore();
         const queryCollection = collection(db, "orders");
     
-        if(dataForm.email === dataForm.emailConfirm){
-    
+       
+         if(dataForm.phone.length > 12){
+
+           setErrorMsg("A ingresado demasiados numeros")
+
+         }
+         else if(dataForm.email != dataForm.emailConfirm){
+          setErrorMsg("Los emails no coinciden")
+         }
+         else {
+
           addDoc(queryCollection, order)
           .then(resp => setOrder(resp))
           .catch(err => console.log(err))
           .finally(() => emptyCart())
-
           setFormOrder("order")
     
-        }
-        else{
-          alert("los correos no coinciden")
-        }
+
+         }
+
+         
+        
+          
+
     
     }
 
@@ -103,7 +119,8 @@ export const CartContextProvider = ({ children }) => {
             setOrder,
             addOrder,
             formOrder,
-            setFormOrder
+            setFormOrder,
+            errorMsg
          } }>
             { children }
 

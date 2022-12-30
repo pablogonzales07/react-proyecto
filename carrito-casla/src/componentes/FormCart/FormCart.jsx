@@ -1,10 +1,9 @@
-import { useContext } from "react";
-import { CartContext } from "../../context/CartContext";
+import { useCartContext } from "../../context/CartContextProvider";
 import "./FormCart.css"
 
 const FormCart = () => {
 
-  const { handleOnChange, dataForm, order, addOrder} = useContext(CartContext);
+  const { handleOnChange, dataForm, addOrder, errorMsg} = useCartContext();
   
 
 
@@ -20,9 +19,8 @@ const FormCart = () => {
             <input className="controls" onChange={ handleOnChange } value={ dataForm.email } type="email" name="email" id="correo" placeholder="Ingrese su Correo"/>
             <input className="controls" onChange={ handleOnChange } value={ dataForm.emailConfirm} type="email" name="emailConfirm" id="correoConfirmacion" placeholder="Confirme su correo electronico"/>
             <button className="buttonFormCart" onClick={ addOrder }>FINALIZAR</button>
+            <h3 className="errorMsg"> { errorMsg } </h3>
         </form>
-
-        <p> { order.id } </p>
     </div>
   )
 }

@@ -1,13 +1,12 @@
-import { useContext } from 'react'
 import { Link } from 'react-router-dom';
-import { CartContext } from '../../context/CartContext'
+import { useCartContext } from '../../context/CartContextProvider';
 import CardClean from '../CardClean/CardClean';
 import CarritoCards from '../CarritoCards/CarritoCards';
 import "./CartConteiner.css"
 
 const CartConteiner = () => {
 
-  const { cartList, price, emptyCart} = useContext(CartContext);
+  const { cartList, price, emptyCart} = useCartContext();
 
   return (
     <div className='cardsCartContainer'>

@@ -57,3 +57,10 @@
     font-size: 20px;
 
 }
+
+.errorMsg {
+    text-align: center;
+    font-size: 2em;
+    color: red;
+
+}
