@@ -11,6 +11,7 @@ export const CartContextProvider = ({ children }) => {
 
     const [cartList, setCartList] = useState( [] )
     const [ formOrder, setFormOrder] = useState("form")
+    const [loadingOrder, setLoadingOrder] = useState(true)
     const [ errorMsg, setErrorMsg ] = useState("")
     const [countProducts, setCountProducts] = useState(0);
     const [price, setPrice] = useState(0);
@@ -85,24 +86,25 @@ export const CartContextProvider = ({ children }) => {
 
          }
          else if(dataForm.email != dataForm.emailConfirm){
+
           setErrorMsg("Los emails no coinciden")
+
          }
          else {
 
           addDoc(queryCollection, order)
           .then(resp => setOrder(resp))
           .catch(err => console.log(err))
-          .finally(() => emptyCart())
+          .finally(() => {
+             emptyCart()
+             setLoadingOrder(false)
+          }
+
+          )
           setFormOrder("order")
     
-
          }
 
-         
-        
-          
-
-    
     }
 
     return(
@@ -120,7 +122,8 @@ export const CartContextProvider = ({ children }) => {
             addOrder,
             formOrder,
             setFormOrder,
-            errorMsg
+            errorMsg,
+            loadingOrder
          } }>
             { children }
 

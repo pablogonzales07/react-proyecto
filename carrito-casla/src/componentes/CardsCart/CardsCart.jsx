@@ -1,7 +1,7 @@
 import { useCartContext } from "../../context/CartContextProvider";
-import "./CarritoCards.css"
+import "./CardsCart.css"
 
-const CarritoCards = ( { producto } ) => {
+const CardsCart = ( { producto } ) => {
 
   const { removeProductCart } = useCartContext();
 
@@ -24,4 +24,4 @@ const CarritoCards = ( { producto } ) => {
   )
 }
 
-export default CarritoCards
+export default CardsCart

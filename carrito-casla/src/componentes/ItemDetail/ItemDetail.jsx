@@ -1,8 +1,8 @@
-import ItemCount from '../ItemCount/ItemCount'
 import { useState } from 'react'
-import "./ItemDetail.css"
+import ItemCount from '../ItemCount/ItemCount'
 import InputCount from '../InputCount/InputCount'
 import { useCartContext } from '../../context/CartContextProvider'
+import "./ItemDetail.css"
 
 const ItemDetail = ( { product } ) => {
 

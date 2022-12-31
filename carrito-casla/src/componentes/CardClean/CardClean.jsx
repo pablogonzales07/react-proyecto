@@ -7,9 +7,9 @@ const CardClean = () => {
 
     <div className="boxCardClean">
       <h2>EL CARRITO ESTA VACIO</h2>
-       <Link to="/">
+        <Link to="/">
           <button>BUSCAR PRODUCT0S</button>
-       </Link>   
+        </Link>   
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useCartContext } from '../../context/CartContextProvider';
 import CardClean from '../CardClean/CardClean';
-import CarritoCards from '../CarritoCards/CarritoCards';
+import ListCart from '../ListCart/ListCart';
 import "./CartConteiner.css"
 
 const CartConteiner = () => {
@@ -12,7 +12,7 @@ const CartConteiner = () => {
     <div className='cardsCartContainer'>
       
 
-      {cartList.length === 0 ? <CardClean /> : cartList.map(producto => <CarritoCards key={producto.id} producto={ producto }/>)}
+      {cartList.length === 0 ? <CardClean /> : <ListCart /> }
 
       {cartList.length > 0 && 
                <>
@@ -25,8 +25,7 @@ const CartConteiner = () => {
                   </div>              
                </>
       }
-
-  
+ 
     </div>
   )
 }

@@ -5,7 +5,7 @@ const ButtonRegist = () => {
   return (
     <>
       <Link to="/registUser" className='buttonRegistContainer'>
-        <button className="buttonRegist">Registrate</button>
+          <button className="buttonRegist">Registrate</button>
       </Link>
     </>
   )

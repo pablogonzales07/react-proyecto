@@ -5,7 +5,7 @@ const ButtonLogin = () => {
   return (
     <>
        <Link to="/loginUser" className='buttonRegistContainer'>
-         <button className="buttonLogin">Inicia sesion</button>
+          <button className="buttonLogin">Inicia sesion</button>
        </Link>
     </>
   )

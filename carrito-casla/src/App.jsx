@@ -2,8 +2,6 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
 import ItemListConteiner from './componentes/ItemListConteiner/ItemListConteiner'
 import NavBar from './componentes/NavBar/NavBar';
 import ItemDetailConteiner from "./componentes/ItemDetailConteiner/ItemDetailConteiner";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import "./App.css"
 import CartConteiner from "./componentes/CartConteiner/CartConteiner";
 import NetworksContainer from "./componentes/NetworksCointainer/NetworksContainer";
 import Header from "./componentes/Header/Header";
@@ -11,6 +9,8 @@ import { CartContextProvider } from "./context/CartContextProvider";import Foote
 import FormRegist from "./componentes/FormRegist/FormRegist";
 import FormLogin from "./componentes/FormLogin/FormLogin";
 import FormCartContainer from "./componentes/FormCartContainer/FormCartContainer";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "./App.css"
 
 
 function App() {
