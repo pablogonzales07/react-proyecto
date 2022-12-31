@@ -4,7 +4,7 @@ Bienvenidos a mi proyecto el cual realize para el curso de REACT de coderhouse. 
 
 OBJETIVOS:
 
-- PoDEr aplicar todo los visto en clase
+- Poder aplicar todo los visto en clase
 - Poder seguir adquiriendo conociemiento en el lenguaje y aplicarlo en el mismo proyecto
 - Seguir aprendiendo nuevos lenguajes y aplicarlos en un futuro
 
